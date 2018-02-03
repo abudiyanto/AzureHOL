@@ -19,7 +19,6 @@ namespace Association.Sample
         protected async Task ReadConfiguration(string lang)
         {
             var language = lang ?? "id";
-            ViewBag.Authorize = false;
             var stringConfiguration = await Helpers.RedisHelper.GetValue("configuration");
             if (stringConfiguration != null)
             {
